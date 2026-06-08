@@ -253,10 +253,7 @@ void i2s_data_callback(const uint8_t *data, uint32_t len) {
 
 void setup() {
   Serial.begin(115200);
-  Serial.println(F("\n╔══════════════════════════════╗"));
-  Serial.println(F("║  ESP32 BT Speaker + OLED     ║"));
-  Serial.println(F("╚══════════════════════════════╝"));
-
+  
   Wire.begin(OLED_SDA, OLED_SCL);
   if (!display.begin(SSD1306_SWITCHCAPVCC, OLED_ADDR)) {
     Serial.println(F("[OLED] Init FAILED – check wiring!"));
